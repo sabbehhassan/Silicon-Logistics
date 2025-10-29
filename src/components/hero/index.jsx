@@ -23,14 +23,14 @@ const Hero = () => {
       {/* 🚛 Truck Animation (Separate Layer) */}
       <div className="absolute top-[20%] left-0 w-full z-20 overflow-visible">
         <motion.div
-          initial={{ x: "-25%", opacity: 0 }}
-          animate={{ x: "125%", opacity: 1 }}
+          initial={{ x: "-100%", opacity: 5 }}
+          animate={{ x: "125%", opacity: 10 }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="text-sky-400 opacity-90 flex justify-center"
+          className="text-sky-500 opacity-90 flex justify-center"
         >
           <Truck size={100} strokeWidth={1.5} />
         </motion.div>

@@ -1,6 +1,5 @@
 import React from "react";
-import AppRoutes from "./routes/approutes"; // ✅ exact same casing as file name
-
+import AppRoutes from "./routes/approutes"; 
 const App = () => {
   return (
     <div className="App">

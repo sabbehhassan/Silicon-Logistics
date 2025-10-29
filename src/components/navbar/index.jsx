@@ -8,19 +8,18 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Team", href: "#team" },
     { name: "Contact", href: "#contact" },
   ];
 
-  // WhatsApp number (change this to your number)
-  const whatsappNumber = "923001234567"; // Example: 92 + your number
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello!%20I%27m%20interested%20in%20your%20services`;
+  // WhatsApp number and link
+  const whatsappNumber = "13465998875";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello!%20I'm%20interested%20in%20your%20services`;
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/95 backdrop-blur-md border-b border-sky-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         
-        {/* Logo / Brand */}
+        {/* Logo (Left) */}
         <div className="flex items-center space-x-2">
           <Truck className="text-sky-400 w-7 h-7" />
           <h1 className="text-2xl font-bold text-white tracking-wide">
@@ -28,8 +27,8 @@ const Navbar = () => {
           </h1>
         </div>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex space-x-8 items-center">
+        {/* Center Links */}
+        <div className="hidden md:flex flex-1 justify-center space-x-10">
           {links.map((link) => (
             <a
               key={link.name}
@@ -40,13 +39,15 @@ const Navbar = () => {
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
+        </div>
 
-          {/* Get Started Button */}
+        {/* Right: Get Started Button */}
+        <div className="hidden md:flex items-center justify-end">
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 bg-sky-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-sky-600 shadow-md hover:shadow-sky-500/30 transition-all"
+            className="bg-sky-500 text-white font-semibold px-5 py-2 rounded-full hover:bg-sky-600 shadow-md hover:shadow-sky-500/30 transition-all"
           >
             Get Started
           </a>
@@ -75,7 +76,6 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-
             {/* Mobile Get Started Button */}
             <a
               href={whatsappLink}

@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* 👈 स्क्रॉल बार छुपाने के लिए यह कोड जोड़ें */
+.scrollbar-hide {
+  /* For IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* For Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* 👆 यहाँ तक का कोड जोड़ें */
+
+
 @keyframes slideDown {
   0% {
     opacity: 0;
