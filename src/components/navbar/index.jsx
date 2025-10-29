@@ -11,9 +11,11 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-  // WhatsApp number and link
-  const whatsappNumber = "13465998875";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello!%20I'm%20interested%20in%20your%20services`;
+  // ✅ Corrected WhatsApp number (no + or spaces)
+const whatsappNumber = "13465998875";
+
+// ✅ Correct link format
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello!%20I'm%20interested%20in%20your%20services`;
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/95 backdrop-blur-md border-b border-sky-800 shadow-lg">
